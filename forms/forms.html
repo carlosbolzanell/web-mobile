@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <style>
+        h1{
+            font-family: "Sofia", sans-serif;
+        }
+        p{
+            font-family:'Edu NSW ACT Foundation', cursive;
+        }
+        #p1{
+            font-family: 'Audiowide', sans-serif;
+        }
+        body{
+            font-family: 'Oswald', sans-serif;
+        }
+    </style>
+    <title>formulario</title>
+</head>
+<body>
+    <form action="obrigado.html">
+        <h1>Formulario de atividade</h1>
+        <p id="p1">Forneça seu nome, endereço de e-mail e um comentario</p>
+        <p><label for="name">Nome</label></p>
+        <p><input type="text" id="name" name="name" required></p>
+
+        <p><label for="email">E-mail</label><br>
+        <input type="email" id="email" name="email" required></p>
+
+        <p><label for="url">URL(opcional)</label><br>
+        <input type="url" id="url" name="url"></p>
+
+        <p><label for="cidade">Cidade</label><br>
+        <input type="text" id="cidade" name="cidade"></p>
+
+        <label for="nome">Selecione o Estado</label><br>
+        <select name="estados" id="estados">
+            <option value=""></option>
+            <option value="Acre">Acre</option>
+            <option value="Alagoas">Alagoas</option>
+            <option value="Amapá">Amapá</option>
+            <option value="Amazonas">Amazonas</option>
+            <option value="Bahia">Bahia</option>
+            <option value="Ceará">Ceará</option>
+            <option value="DF">Distrito Federal</option>
+            <option value="ES">Espírito Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraiba</option>
+            <option value="PR">Parana</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="RO">Rondônia</option>
+            <option value="RR">Roraima</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="SP">São Paulo</option>
+            <option value="SE">Sergipe</option>
+            <option value="TO">Tocantins</option>
+           
+        </select><br><br>
+
+        <label for="comentario">Comentario</label><br>
+        <textarea name="comentario" id="" cols="20" rows="3"></textarea><br><br>
+
+        <input type="submit">
+
+        </form>
+
+        <hr>
+
+        <form action="obrigado.html">
+
+        <p id="p2">Validando um formulario completo</p>
+        <label for="name">Nome</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="sbn">Sobrenome</label><br>
+        <input type="text" id="sbn" name="sbn" required><br><br>
+        <label for="nomeusr">Nome de Usuario</label><br>
+        <input type="text" id="nomeusr" name="nomeusr" required><br><br>
+        <label for="senha">Senha</label><br>
+        <input type="password" name="senha" id="senha" required><br><br>
+        <label for="senha">Repita sua senha</label><br>
+        <input type="password" name="senha" id="senha" required><br><br>
+        <label for="email">E-mail</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <input class="ip1" type="checkbox" id="termons" name="termos" value="aceitar" required>
+        <label class="ip1" for="termons">Por favor, aceite os termos de privacidade</label><br><br>
+        <input class="ip1" type="checkbox" id="noti" name="noti" value="notifi">
+        <label class="ip1" for="noti">Deseja receber notificaçõe do site?</label><br><br>
+
+        <fieldset>
+            <legend>Tópicos(pelo menos dois)</legend>
+            <input class="ip1" type="checkbox" id="tcnologia" name="tcnologia" value="tec">
+            <label class="ip1" for="termons">Tecnologia</label>
+            <input class="ip1" type="checkbox" id="Esportes" name="Esportes" value="esportes">
+            <label  class="ip1" for="Esportes">Esportes</label>
+            <input class="ip1" type="checkbox" id="games" name="games" value="games">
+            <label class="ip1" for="games">Games</label><br>
+            <input class="ip1" type="checkbox" id="mat" name="mat" value="matematica">
+            <label class="ip1" for="hist">Matemática</label>
+            <input class="ip1" type="checkbox" id="hist" name="hist" value="historia">
+            <label class="ip1" for="games">História</label>
+        </fieldset><br><br>
+
+        <input type="submit" ><br><br>
+
+    </form>
+    
+</body>
+</html>
