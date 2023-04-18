@@ -75,9 +75,9 @@
     font-weight: 700;
 }
 .sobretitulo{
-    font-size: 12px;
+    font-size: 15px;
     font-family: var(--fonte-1);
-    margin-right: 17%;
+    margin-right: 3rem;
 }
 .email{
     border: 1px solid #f5f5f5;
@@ -122,7 +122,7 @@
     margin: 0;
 }
 .logos{
-    width: 40%;
+    width: 50%;
     margin: 0;
 }
 .logos img{
@@ -133,7 +133,8 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: 121px;
+    margin-top: 6rem;
+    margin-bottom: 3rem;  
 }
 .pg-2{
     margin-top: 130px;
@@ -197,7 +198,6 @@
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    gap: 60px;
 }
 
 .numeros img{
@@ -287,11 +287,114 @@
     text-align: center;
     margin: auto;
 }
+.mobile{
+    display: none;
+}
+.img-mobile{
+    display: none;
+}
 
 @media(max-width: 768px){
+
+    .cabecalho-menu{
+        display: none;
+    }
+    .cabecalho-registro{
+        display: none;
+    }
+    .mobile {
+        display: flex;
+        justify-content: flex-end;
+        align-items: end;
+        width: 5%;
+        height: 3%;
+        margin-top: 1.7rem;
+        margin-left: 16rem;
+    }
+    .titulo{
+        font-size: 3.3rem;
+    }
+    .sobretitulo{
+        font-size: 1rem;
+        margin-right: auto;
+        margin-top: auto;
+    }
+    .apresentacao-img{
+        display: none;
+    }
+    .forms{
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+    .email{
+        margin-right: 1rem;
+    }
+    .start{
+        width: 40%;
+    }
     .img-baixo{
+        margin-top: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding-bottom: 4rem;
+    }
+    .apresentacao-img-baixo{
+        width: 40%;
+    }
+    .logos{
+        width:100%;
+    }
+    .img-mobile{
+        display: flex;
+        margin: auto;
+    }
+    .img-mobile img{
+        width: 100%;
+        margin: 0;
+    }
+    .textos-pg-2{
         display: flex;
         flex-direction: column;
     }
-
+    .titulo-pg-2{
+        font-size: 1.9rem;
+        margin-right: auto;
+    }
+    .subtitulo-pg-2{
+        font-size: 1rem;
+        margin-right: 5rem;
+    }
+    .imagens-pg-2{
+        display: flex;
+        flex-direction: column;
+    }
+    .titulo-pg-3{
+        display: flex;
+        text-align: center;
+        font-size: 1.9rem;
+    }
+    .subtitulo-pg-3{
+        display: flex;
+        text-align: center;
+        font-size: 1rem;
+    }
+    .numeros{
+        width: 130%;
+   
+    }
+    .numeros img{
+        width: 100%;
+    }
+    .texto-amarelo{
+        font-size: 2rem;
+        padding: 0.5rem;
+        margin: auto;
+    }
+    .rodape-1{
+        display: flex;
+        flex-direction: column;
+        
+    }
 }
