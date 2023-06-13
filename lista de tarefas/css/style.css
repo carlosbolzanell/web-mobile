@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    padding: 20px;
+    background-color: aqua;
+    
+}
+
+#botao-adicionar {
+    margin-left: 10px;
+    padding: 5px;
+}
+
+#lista-tarefas {
+    margin-top: 20px;
+}
+
+.tarefa {
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#titulo{
+    display: flex;
+    justify-content: center;
+    color: black;
+}
+.botoes{
+    display: flex;
+    justify-content: start;
+}
+#campo-tarefa{
+    border: 2px solid black;
+    border-radius:10px ;
+    padding: 20px;
+    width: 80%;
+    font-size: 17px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: aliceblue;
+
+}
+#botao-adicionar{
+    color: black;
+    font-size: 17px;
+    background-color: lawngreen;
+    border: 2px solid black;
+    padding: 20px 100px 20px 100px;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif ;
+}
+.concluida{
+    text-decoration: line-through;
+}
+.botaoRmv{
+    padding: 10px 20px;
+    background-color: red;
+    border: 1px solid black;
+    border-radius: 20px;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+.lista{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 10px 15px;
+    list-style: none;
+    width: 90%;
+    margin-bottom: 5px;
+    background-color:aliceblue;
+}
