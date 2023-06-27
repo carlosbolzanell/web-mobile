@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body.modo-claro{
+    --cor-titulo: rgb(44,44,255);
+    --cor-fundo: rgb(254,254,254);
+    --cor-texto: rgb(2,2,2);
+    --bg-lista: rgb(156, 239, 228);
+    --btn-rmv: rgb(255,0,0);
+}
+body.modo-escuro{
+    --cor-titulo: rgb(239, 255, 241);
+    --cor-fundo: rgb(19, 18, 18);
+    --cor-texto: rgb(253,254,254);
+    --bg-lista: rgb(134, 144, 240);
+    --btn-rmv: rgb(255,0,0);
+}
+
+body {
+    transition: 0.3s;
+    font-family: 'Montserrat', sans-serif;
+    padding: 20px;
+    background-color: var(--cor-fundo);
+    
+}
+
+#botao-adicionar {
+    margin-left: 10px;
+    padding: 5px;
+}
+
+#lista-tarefas {
+    margin-top: 20px;
+}
+
+#titulo{
+    display: flex;
+    justify-content: center;
+    color: var(--cor-titulo);
+}
+.botoes{
+    display: flex;
+    justify-content: start;
+}
+#campo-tarefa{
+    border: 2px solid black;
+    border-radius:10px ;
+    padding: 20px;
+    width: 80%;
+    font-size: 17px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-lista);
+
+}
+#botao-adicionar{
+    color: var black;
+    background-color: var(--bg-lista);
+    border: 2px solid black;
+    padding: 20px 100px 20px 100px;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif ;
+}
+.concluida{
+    text-decoration: line-through;
+    color: var(--btn-rmv);
+}
+.botaoRmv{
+    padding: 10px 20px;
+    background-color: var(--btn-rmv);
+    border: 1px solid black;
+    border-radius: 20px;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+.lista{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 10px 15px;
+    list-style: none;
+    width: 90%;
+    margin-bottom: 5px;
+    background-color: var(--bg-lista);
+}
+#botaoModo{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    border: 1.5px solid black;
+    border-radius: 10px;
+    background-color: var(--bg-lista);
+}
+.centro{
+    display: flex;
+    justify-content: center;
+}
