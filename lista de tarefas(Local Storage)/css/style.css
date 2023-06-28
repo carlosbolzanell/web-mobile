@@ -4,7 +4,7 @@ body.modo-claro{
     --cor-titulo: rgb(44,44,255);
     --cor-fundo: rgb(254,254,254);
     --cor-texto: rgb(2,2,2);
-    --bg-lista: rgb(156, 239, 228);
+    --bg-lista: rgb(72, 106, 117);
     --btn-rmv: rgb(255,0,0);
 }
 body.modo-escuro{
@@ -49,10 +49,13 @@ body {
     font-size: 17px;
     font-family: 'Montserrat', sans-serif;
     background-color: var(--bg-lista);
-
+    color: var(--cor-fundo);
+}
+#campo-tarefa::placeholder{
+    color: var(--cor-fundo);
 }
 #botao-adicionar{
-    color: var black;
+    color: var(--cor-fundo);
     background-color: var(--bg-lista);
     border: 2px solid black;
     padding: 20px 100px 20px 100px;
@@ -82,6 +85,7 @@ body {
     width: 90%;
     margin-bottom: 5px;
     background-color: var(--bg-lista);
+    color: var(--cor-fundo);
 }
 #botaoModo{
     display: flex;
@@ -90,6 +94,7 @@ body {
     border: 1.5px solid black;
     border-radius: 10px;
     background-color: var(--bg-lista);
+    color: var(--cor-fundo)
 }
 .centro{
     display: flex;
