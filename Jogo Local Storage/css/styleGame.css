@@ -15,7 +15,7 @@ body{
 .quadro{
     border: 1px solid black;
     border-radius: 30px;
-    width: 900px;
+    width: 1200px;
     height: 400px;
     background-color: rgb(101, 26, 26);
     display: flex;
@@ -34,7 +34,7 @@ body{
     gap: 3.5rem;
     align-items: center;
 }
-#titulo{
+.titulo{
     font-family: var(--Montserrat);
     margin-bottom: 50px;
     color: rgb(108, 245, 208);

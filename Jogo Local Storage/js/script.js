@@ -1,7 +1,9 @@
 
 let titulo = document.getElementById('titulo');
+let quadro = document.querySelector('.quadro');
 
 let contador = 0;
+let contador2 = 0;
 let jogador = '';
 
 do{
@@ -18,10 +20,16 @@ questoes(quest, respostas);
 
 
 function questoes(quest, respostas){
-    if(quest.lenght <= 0 || respostas.lenght <=0){
+    contador2++;
+    if(contador2 == 10){
         acabar();
     }
-    titulo.innerText = quest[0];
+    
+    quadro.innerHTML = "";
+    let titulo = document.createElement('h1');
+
+    titulo.className = 'titulo';
+    titulo.textContent = quest[0];
 
     let opc = respostas[0];
     let random = Math.floor(Math.random()*4);
@@ -30,9 +38,14 @@ function questoes(quest, respostas){
     opc.splice(random, 1, correta);
 
     let div = document.createElement('div');
+    div.className = 'botoes';
+
+    let div2 = document.createElement('div');
+    div2.className = 'botao';
 
     for(let i=0; i<4; i++){
         let btn = document.createElement('button');
+        btn.className = 'altr';
         btn.innerText = opc[i];
 
         if(i == random){
@@ -58,8 +71,23 @@ function questoes(quest, respostas){
         }
         div.appendChild(btn);
     }
-    document.body.appendChild(div);
+    quadro.appendChild(titulo);
+    quadro.appendChild(div);
 
+}
+
+function acabar(){
+    let pontosTxt = "pontos!";
+    if (contador == 1) {
+        pontosTxt = "ponto!"    
+    }
+    alert('Você conseguiu '+contador+" "+pontosTxt);
+    rankingLS.push([jogador, contador]);
+    rankingLS.sort(function (a, b) {
+        return a[1] - b[1];
+    });
+    rankingLS.reverse();
+    localStorage.setItem("ranking", JSON.stringify(rankingLS));
 }
 
 
