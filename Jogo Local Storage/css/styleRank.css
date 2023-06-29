@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root{
+    --Montserrat: 'Montserrat', sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    background-color: aqua;
+}
+#tabela-ranking{
+    font-family: var(--Montserrat);
+}
+tr{
+    display: flex;
+    gap: 1px;
+}
+
+.jogador{
+    border: 1px solid black;
+    width: 300px;
+    height: 38px;
+    font-family: var(--Montserrat);
+    text-align: center;
+    background-color: rgb(242, 72, 72);
+    font-size: 23px;
+}
+.pontos{
+    border: 1px solid black;
+    width: 160px;
+    height: 38px;
+    font-family: var(--Montserrat);
+    text-align: center;
+    background-color: rgb(237, 55, 55);
+    font-size: 23px;
+}
+.tabela{
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+#botaoBack{
+    margin-top: 30px;
+}

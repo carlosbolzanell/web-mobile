@@ -1,7 +1,9 @@
 
 let titulo = document.getElementById('titulo');
 let quadro = document.querySelector('.quadro');
+let rankingLS = JSON.parse(localStorage.getItem("ranking")) || [];
 
+let contadorQuestao = 0;
 let contador = 0;
 let contador2 = 0;
 let jogador = '';
@@ -21,9 +23,14 @@ questoes(quest, respostas);
 
 function questoes(quest, respostas){
     contador2++;
-    if(contador2 == 10){
+    if(contador2 == 11){
         acabar();
     }
+    contadorQuestao++;
+
+    let questao = document.createElement('p');
+    questao.innerText = contadorQuestao;
+    questao.className = 'questao';
     
     quadro.innerHTML = "";
     let titulo = document.createElement('h1');
@@ -51,11 +58,11 @@ function questoes(quest, respostas){
         if(i == random){
             btn.addEventListener('click', function(){
                 btn.style.backgroundColor = 'lime';
+                contador++;
                 setTimeout(function(){
                     quest.shift();
                     respostas.shift();
                     questoes(quest,respostas);
-                    contador++;
                 },500);
             })
             
@@ -71,6 +78,7 @@ function questoes(quest, respostas){
         }
         div.appendChild(btn);
     }
+    quadro.appendChild(questao);
     quadro.appendChild(titulo);
     quadro.appendChild(div);
 
@@ -81,13 +89,16 @@ function acabar(){
     if (contador == 1) {
         pontosTxt = "ponto!"    
     }
-    alert('Você conseguiu '+contador+" "+pontosTxt);
+    alert('Você conseguiu '+contador+"/10"+pontosTxt);
     rankingLS.push([jogador, contador]);
     rankingLS.sort(function (a, b) {
         return a[1] - b[1];
     });
     rankingLS.reverse();
     localStorage.setItem("ranking", JSON.stringify(rankingLS));
+
+    window.location.href = 'rank.html';
+
 }
 
 
