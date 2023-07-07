@@ -1,6 +1,13 @@
-.tela img{
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root{
+    --Montserrat: 'Montserrat', sans-serif;
+}
+
+.tela-pc img{
     width: 80%;
     border-radius: 20px;
+    margin-bottom: 20px;
 }
 .tela-pc{
     display: flex;
@@ -8,8 +15,8 @@
     justify-content: center;
     align-items: center; 
     position: absolute;
-    width: 80%;
-    height: 60%;
+    width: 50%;
+    height: 80%;
     border: 2px solid black;
     border-radius: 20px;   
     z-index: 999;
@@ -24,4 +31,14 @@ body{
 }
 #botao-fechar{
     margin-top: 30px;
+}
+
+.titulo{
+    font-family:var(--Montserrat);
+    font-size: 30px;
+}
+.paragrafo{
+    font-family: var(--Montserrat);
+    font-size: 20px;
+    text-align: center;
 }
