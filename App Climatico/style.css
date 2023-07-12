@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root{
+    --montserrat: 'Montserrat' , sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(0,212,255);
+    background: linear-gradient(0deg, rgba(0,212,255,1) 11%, rgba(61,195,254,1) 45%, rgba(249,249,249,1) 84%);
+}
+.div{
+    border: 1px black solid;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 60px 50px;
+    background: rgb(18,255,0);
+    background: linear-gradient(177deg, rgba(18,255,0,1) 11%, rgba(101,254,61,1) 56%, rgba(191,251,175,1) 71%, rgba(249,249,249,1) 92%);
+}
+.titulo{
+    display: flex;
+    justify-content: center;
+    font-family: var(--montserrat);
+    font-size: 50px;
+}
+.input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+#cidade{
+    padding: 8px 5px;
+    font-size: 25px;
+    border-radius: 20px;
+    border: 2px black solid;
+    font-family: var(--montserrat);
+    background-color: rgb(185, 255, 255);
+}
+#botaoPesquisa{
+    padding: 15px 20px;
+    border-radius: 20px;
+    border: 1.7px black solid;
+    font-family: var(--montserrat);
+    background-color: aqua;
+}
+.temperaturas{
+    margin-top: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: var(--montserrat);
+}
+

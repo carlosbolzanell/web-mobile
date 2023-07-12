@@ -12,41 +12,47 @@
 // .finally(msg => console.log('Concluido'))
 
 // console.log(consultarCEP);
-
+const error = document.getElementById('erro');
 const cep = document.getElementById('cep');
 cep.addEventListener('focusout', ()=> buscaEndereco(cep.value));
 
 async function buscaEndereco(cep){
+    error.innerText = '';
+    const cidade = document.getElementById('cidade');
+    const uf = document.getElementById('estado')
+    const endereco = document.getElementById('endereco')
+    const bairro = document.getElementById('bairro') 
+    const complemento = document.getElementById('complemento')
+
     try{
         const consultarCEP = await fetch('https://viacep.com.br/ws/'+cep+'/json/')
         const consultarCEPConvert = await consultarCEP.json();
-
+    
         if(consultarCEPConvert.erro){
             throw Error('CEP inexistente')
         }else{
             console.log(consultarCEPConvert)
         }
-
-        const cidade = document.getElementById('cidade');
+        
         cidade.value = consultarCEPConvert.localidade;
         console.log(consultarCEPConvert);
 
-        const uf = document.getElementById('estado')
         uf.value = consultarCEPConvert.uf;
 
-        const endereco = document.getElementById('endereco')
         endereco.value = consultarCEPConvert.logradouro;
 
-        const bairro = document.getElementById('bairro')
         bairro.value = consultarCEPConvert.bairro;
 
-        const complemento = document.getElementById('complemento')
         complemento.value = consultarCEPConvert.complemento;
     }
     catch(erro){
         console.log(erro);
-        const error = document.getElementById('erro');
-        error.innerText = erro;
+        error.innerHTML = '<p>Erro: CPF inválido</p>';
+        cidade.value = '';
+        uf.value = '';
+        endereco.value = '';
+        bairro.value = '';
+        complemento.value = ''
 
     }
 }
