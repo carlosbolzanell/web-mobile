@@ -1,36 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import "../Css/";
 
-:root{
-  --font: 'Monsterrat', sans-serif;
-}
-*{
-  margin: 0;
-  padding: 0;
-}
 .logo{
   font-family: var(--font);
+}
+.body{
+  background-color: var(--cor-fundo);
 }
 .header{
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background-color: aquamarine;
+  background-color: var(--cor-texto);
   height: 60px;
   padding: 0 20px;
 }
 .list{
   display: flex;
   gap: 70px;
+  color: var(--cor-texto);
 }
 .list li{
   list-style: none;
+  color: var(--cor-texto);
 }
-.list li a{
+.list li button{
   text-decoration: none;
-  color: black;
+  border: none;
+  background-color: transparent;
+  color: var(--cor-texto);
+  font-size: 17px;
   font-family: var(--font);
 }
 .modo{
-  text-decoration: none;
+  border: none;
+  background-color: transparent;
+  font-size: 18px;
 }

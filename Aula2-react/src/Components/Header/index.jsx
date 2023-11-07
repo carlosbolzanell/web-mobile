@@ -1,24 +1,35 @@
 import { useState } from 'react'
 import './Header.css'
 
-export default function Header() {
-    const [screen, setScreen] = useState('T');
+export default function Header({ changePage }) {
+    const [modo, setModo] = useState('claro');
 
-    const mudarTela = () =>{
-        if(screen == 'T'){
-            setScreen('D');
+    const mudarModo = () =>{
+        if(modo == 'claro'){
+            document.body.className = 'modo-escuro'
+            setModo('escuro');
+            document.getElementById('modo').innerText = "🌚";
         }else{
-            setScreen('T');
+            document.body.className = 'modo-claro'
+            setModo('claro');
+            document.getElementById('modo').innerText = "🌞";
         }
     }
+
     return (
         <header className="header">
             <h2 className="logo">App</h2>
-            <ul className="list">
-                <li><a href="" onClick={()=>{mudarTela()}}>Delivery</a></li>
-                <li><a href="" onClick={()=>{mudarTela()}}>Lista de Tarefas</a></li>
-            </ul>
-            <a href="" className="modo">🌞</a>
+            <nav>
+                <ul className="list">
+                    <li>
+                        <button className='btn' onClick={()=>{changePage('Delivery')}}>Delivery</button>
+                    </li>
+                    <li>
+                        <button className='btn' onClick={()=>{changePage('ToDoList')}}>Lista de Tarefas</button>
+                    </li>
+                </ul>
+            </nav>
+            <button className="modo" id='modo' onClick={()=>{mudarModo()}}>🌞</button>
         </header>
     )
 }

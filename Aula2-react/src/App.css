@@ -1,0 +1,5 @@
+@import "../Css/";
+
+body{
+    background-color: var(--cor-fundo);
+}
