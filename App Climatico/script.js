@@ -7,6 +7,12 @@ const temps = document.querySelector('.temperaturas')
 
 botao.addEventListener('click', ()=> buscarCidade());
 
+cidade.addEventListener('keyup', function(enter){
+    if(enter.key === 'Enter'){
+       buscarCidade();
+    }
+});
+
 async function buscarCidade(){
 
     let cidade2 = cidade.value.replaceAll(" ", "_");
