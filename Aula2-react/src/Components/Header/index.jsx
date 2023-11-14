@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import './Header.css'
 
+document.body.className = 'modo-claro';
+// eslint-disable-next-line react/prop-types
 export default function Header({ changePage }) {
     const [modo, setModo] = useState('claro');
 

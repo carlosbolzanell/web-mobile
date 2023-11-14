@@ -1,13 +1,10 @@
 @import "../Css/";
 
-.body{
-    background-color: var(--cor-fundo);
-}
-
 .task{
     display: flex;
     justify-content: space-between;
-    width: 50%;
+    align-items: center;
+    width: 72.8%;
     border: 1px solid var(--cor-texto);
     padding: 5px;
 }
@@ -16,11 +13,17 @@
     width: 70%;
     height: 30px;
     padding-left: 5px;
+    border: 1.5px solid var(--cor-texto);
+    color: var(--cor-texto);
+}
+#input::placeholder{
     color: var(--cor-texto);
 }
 .inputs button{
     height: 34px;
     width: 20%;
+    border: 1.5px solid var(--cor-button);
+    background-color: var(--cor-button);
     color: var(--cor-texto);
 }
 .inputs{
@@ -35,10 +38,14 @@
 }
 .tasks{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: start;
     flex-direction: column;
-    margin-top: 10px;
-    gap: 10px;
+    margin-top: 15px;
+    margin-left: 55px;
+    gap: 15px;
     color: var(--cor-texto);
+}
+.excluir{
+    font-size: 20px;
+    border: none;
 }

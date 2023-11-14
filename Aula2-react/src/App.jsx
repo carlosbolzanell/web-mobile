@@ -4,7 +4,7 @@ import Delivery from "./Components/Delivery";
 import Header from "./Components/Header";
 
 const App = () => {
-  const [currentPage, setCurrentPage] = useState('Delivery');
+  const [currentPage, setCurrentPage] = useState('ToDoList');
 
   const changePage = (page) => {
     setCurrentPage(page);

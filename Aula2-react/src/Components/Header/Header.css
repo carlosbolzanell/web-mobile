@@ -2,38 +2,40 @@
 
 .logo{
   font-family: var(--font);
+  color: var(--cor-texto);
+  background-color: var(--cor-header);
 }
-.body{
-  background-color: var(--cor-fundo);
-}
+
 .header{
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--cor-texto);
+  background-color: var(--cor-header);
   height: 60px;
   padding: 0 20px;
 }
 .list{
   display: flex;
   gap: 70px;
+  background-color: var(--cor-header);
   color: var(--cor-texto);
 }
 .list li{
   list-style: none;
+  background-color: var(--cor-header);
   color: var(--cor-texto);
 }
 .list li button{
   text-decoration: none;
   border: none;
-  background-color: transparent;
+  background-color: var(--cor-header);
   color: var(--cor-texto);
   font-size: 17px;
   font-family: var(--font);
 }
 .modo{
   border: none;
-  background-color: transparent;
+  background-color: var(--cor-header);
   font-size: 18px;
 }

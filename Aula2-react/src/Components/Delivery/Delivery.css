@@ -1,1 +1,28 @@
-@import "../Css/"
+@import "../Css/";
+
+.delivery{
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: var(--font);
+}
+.status{
+    font-size: 30px;
+}
+.butoes{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: 30px;
+}
+.butoes button{
+    padding: 10px;
+    border: 1px solid red;
+    border-radius: 20px;
+    
+}
+.img{
+    width: 40%;
+}
